@@ -1,0 +1,57 @@
+\documentclass{autojsarticle}
+
+\begin{document}
+
+\begin{center}
+	\huge\bfseries autojsarticle
+\end{center}
+
+\section{概要}
+
+これは、\LaTeX エンジンに応じて、自動的に文書クラス、文書クラスオプション、graphicxパッケージオプションを切り替えるクラスファイルです。これらの対応関係を表\ref{tbl.correspondence}に示します。
+
+\begin{table}[h]
+	\centering
+	\caption{\LaTeX エンジンと文書クラス、文書クラスオプション、graphicxパッケージオプションの対応関係}
+	\label{tbl.correspondence}
+	\begin{tabular}{|c|c|c|c|}
+		\hline 
+		\LaTeX エンジン & 文書クラス & 文書クラスオプション & graphicxオプション \\ 
+		\hline\hline 
+		platex & jsarticle & & dvipdfmx \\ 
+		\hline 
+		uplatex & jsarticle & uplatex & dvipdfmx \\ 
+		\hline 
+		pdflatex & bxjsarticle & pdflatex,ja=standard & pdftex \\ 
+		\hline 
+		lualatex & ltjsarticle &  & luatex \\ 
+		\hline 
+		xelatex & bxjsarticle & xelatex,ja=standard & xetex \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+
+\section{図の貼付け}
+
+EPS図面の貼り付け例を図\ref{fig.latex.eps}に、PDF図面の貼付け例を図\ref{fig.latex.pdf}に示します。
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm]{latex.eps}
+	\caption{EPS図面の貼付け例}
+	\label{fig.latex.eps}
+	\bigskip
+	\includegraphics[width=5cm]{latex.pdf}
+	\caption{PDF図面の貼付け例}
+	\label{fig.latex.pdf}
+\end{figure}
+
+\section{使用法}
+
+autojsarticle.cls を適切なディレクトリ（\slash usr\slash local\slash  texlive\slash texmf-local\slash tex\slash latex\slash local\slash 等）にコピーし、mktexlsr コマンドを実行してください。
+
+あとは、$\backslash$documentclass\{autojsarticle\} としてやればOKです。
+
+\verb/test/
+
+\end{document}
