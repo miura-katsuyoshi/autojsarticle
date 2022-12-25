@@ -49,6 +49,7 @@
 	\DeclareOption*{\PassOptionsToClass{\CurrentOption}{ltjsarticle}}%
 	\ProcessOptions\relax
 	\LoadClass{ltjsarticle}%
+	\RequirePackage{luatexja}%
 	\RequirePackage[luatex]{graphicx}%
 \else\ifx X\my@engine% xelatex
 	\NeedsTeXFormat{LaTeX2e}%

@@ -8,25 +8,25 @@
 
 \section{概要}
 
-これは、\LaTeX エンジンに応じて、自動的に文書クラス、文書クラスオプション、graphicxパッケージオプションを切り替えるクラスファイルです。これらの対応関係を表\ref{tbl.correspondence}に示します。
+これは、\LaTeX エンジンに応じて、自動的に文書クラス、文書クラスオプション、追加パッケージ、graphicxパッケージオプションを切り替えるクラスファイルです。これらの対応関係を表\ref{tbl.correspondence}に示します。platex, uplatex は dvi ファイルを出力しますので、dvipdfmx で pdf に変換してください。それ以外は pdf を直接出力します。
 
 \begin{table}[h]
 	\centering
 	\caption{\LaTeX エンジンと文書クラス、文書クラスオプション、graphicxパッケージオプションの対応関係}
 	\label{tbl.correspondence}
-	\begin{tabular}{|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline 
-		\LaTeX エンジン & 文書クラス & 文書クラスオプション & graphicxオプション \\ 
+		\LaTeX エンジン & 文書クラス & 文書クラスオプション & 追加パッケージ & graphicxオプション & 出力 \\ 
 		\hline\hline 
-		platex & jsarticle & & dvipdfmx \\ 
+		platex & jsarticle & & & dvipdfmx & dvi \\ 
 		\hline 
-		uplatex & jsarticle & uplatex & dvipdfmx \\ 
+		uplatex & jsarticle & uplatex & & dvipdfmx & dvi \\ 
 		\hline 
-		pdflatex & bxjsarticle & pdflatex,ja=standard & pdftex \\ 
+		pdflatex & bxjsarticle & pdflatex,ja=standard & & pdftex & pdf\\ 
 		\hline 
-		lualatex & ltjsarticle &  & luatex \\ 
+		lualatex & ltjsarticle &  & luatexja & luatex & pdf\\ 
 		\hline 
-		xelatex & bxjsarticle & xelatex,ja=standard & xetex \\ 
+		xelatex & bxjsarticle & xelatex,ja=standard & & xetex & pdf\\ 
 		\hline 
 	\end{tabular} 
 \end{table}
